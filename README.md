@@ -76,7 +76,27 @@ Para ingresar en la aplicacion logistic, usando un web browser, ir a la ruta:
 
 > http://localhost:8000/
 
-V. Ruta y documentacion API
+V. Ruta y documentacion API:
 
+Para ingresar a la documentación de la API, así como un medio de pruebas, ingresar a:
+
+> http://localhost:8000/api/ 
+
+Donde /vehicle/ es la API  que se encarga del listado de los vehiculos, la creación, edición y eliminación, al ingresar
+a la instancia de alguno de los vehiculos, se puede hacer la operacion del mismo, ejemplo:
+
+>/api/vehicle/1/
+
+
+Los eventos (event) son la forma de dar la instrucción de que un vehículo viaje a una ciudad determinada, la ruta /event/ 
+es la API que se encarga del listado de los event asi como su creación.
+
+Para una documentación más detallada (swagger) de esta API,  ingresar a:
+
+> http://localhost:8080/swagger
+
+# Desarrollador
+
+[@Brerafra](github.com/Brerafra)
 
 

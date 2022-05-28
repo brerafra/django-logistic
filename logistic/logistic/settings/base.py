@@ -31,11 +31,12 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
-    'app_logistic',
+    'app_logistic', #aplicacion api-visual
 ]
 
 THIRD_APPS = [
-    'rest_framework', #pruebas para api -restfull
+    'rest_framework', #pruebas para api -rest
+    'drf_yasg', #documentacion api -rest
 ]
 
 INSTALLED_APPS = BASE_APPS+LOCAL_APPS+THIRD_APPS
