@@ -53,7 +53,7 @@
                       </tr>
                 </thead>
                 <tbody>
-                  {% for vehicle in vehicles %}
+                  {% for vehicle in person_page_obj %}
                   <tr>
                     <td>{{vehicle.vehicle_id}}</td>
                     <td>{{vehicle.fuel_consumption}}</td>
@@ -65,11 +65,29 @@
                 </tbody>
               </table>
 
-                
+              <br>
+              <div class="pagination"> 
+                <span class="steps-links">
+                  {% if person_page_obj.has_previous %}
+                    <a href="?page=1"><<1</a>
+                    <a href="?page={{person_page_obj.previous_page_number}}">Anterior</a>
+                  {% endif %}
+
+                  <span class="current">
+                    Página {{person_page_obj.number}} de {{person_page_obj.paginator.num_pages}}
+                  </span>
+
+                  {% if person_page_obj.has_next %}
+                    <a href="?page={{person_page_obj.next_page_number}}">Siguiente>>  </a>
+                    <a href="?page={{person_page_obj.paginator.num_pages}}">Último</a>
+                  {% endif %}
+
+                </span>
+              </div>
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-              ProsaDB
+              BrenDB
             </div>
             <!-- /.card-footer-->
           </div>

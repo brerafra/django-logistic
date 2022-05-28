@@ -4,6 +4,7 @@ from rest_framework import viewsets
 from .serializers import VehicleSerializer,EventSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from django.core.paginator import Paginator
 
 def index(request):
     return render(request,'index.html')
@@ -11,13 +12,15 @@ def index(request):
 def cityView(request,city):
     if request.method=='GET':
         vehicles = Vehicle.objects.filter(city=city)
-        print(vehicles)
+        context = {}
+        context['vehicles'] = vehicles
+        
+        paginated_vehicles = Paginator(vehicles, 10)
+        page_number = request.GET.get('page')
+        person_page_obj = paginated_vehicles.get_page(page_number)
+        context['person_page_obj']=person_page_obj
 
-        context = {
-            'vehicles':vehicles,
-        }
-
-        return render(request,'city.html',context)
+        return render(request,'city.html',context=context)
     else:
         return render(request,'index.html')
 
