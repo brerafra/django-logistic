@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&family=Sen&display=swap');
+
+body {
+     min-height: 100%; /*este comentario es para optimizar el degradado en el fondo del sitio*/
+     font-size: 78.12%; /*truco para convertir un rem en 10px*/
+     font-family: 'Oxanium', cursive;
+
+     /*background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+     /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+}
+
+:root {
+  --sysGreen: #00a65a;
+  --sysGreenO: #026a3a;
+  --sysGreenC: #00ff8a;
+  --sysYellow: #e1aa35;
+  --sysYellowO: #c58600;
+  --sysYellowC: #ffe252;
+  --sysRed: #dc3545;
+  --sysRedO: #ba0113;
+  --sysRedC: #ff7074;
+
+  -fondoPROSA: rgba(23,42,48,0.95);
+  --azulProsa: #0a1739;
+  --azulProsaD: rgba(10,23,57,0.8);
+  --rojoPROSA: #e5322d;
+  --midnightBlue: #04171d;
+  --midnightBlue1: #1E1F26;
+  --indigoInk: #283655;
+  --indigoClaro: #2f4169;
+  --blueberry: #4D658D;
+  --perlwinkle: #D0E1F9;
+  --navy: #00293C;
+  --peacockBlue: #1E656D;
+  --ivory: #F1F3CE;
+  --candyApple: #F62A00;
+  --naranjaD: rgba(252, 76, 2, 0.8);
+
+  --azulWV: #141f5d;
+  --rojoPROSAC: #fe615d;
+  --azulO: #1d2c4f;
+  --azulOD: rgba(29, 44, 79, 0.8);
+  --azulC: #5d688d;
+  --amarillo: #cc9933;
+  --amarilloO: #a57e2f;
+  --verdeBase:  #00bc8c;
+  --azulBase:  #3498db;
+  --rojoBase: #e74c3c;
+}
+
+/*********General********/
+a.aGreen {
+  color: var(--sysGreen)!important;
+}
+a.aGreen:hover {
+  color: var(--sysGreenC)!important;
+}
+a.aYellow {
+  color: var(--sysYellow)!important;
+}
+a.aYellow:hover {
+  color: var(--sysYellowC)!important;
+}
+a.aRed {
+  color: var(--sysRed)!important;
+}
+a.aRed:hover {
+  color: var(--sysRedC)!important;
+}
+
+/*********MENU Horizontal********/
+nav.main-header {
+  background-color: var(--rojoPROSA)!important;
+}
+footer.main-footer {
+  background-color: var(--indigoInk)!important;
+}
+i.menuI {
+  font-size: 1rem!important;
+  color: #fff!important;
+}
+div.mfFotoCont {
+  width: 100%;
+  text-align: center;
+}
+img.mhFotoPerf {
+  height: 100px;
+  text-align: center;
+  margin: 10px;
+}
+
+/*********Sidebar********/
+aside.main-sidebar {
+    background-color: var(--azulProsa)!important;
+}
+p.sbPerfil {
+  margin: 0;
+  color: var(--sysYellow);
+  font-size: .7rem;
+}
+nav.navPrincipal {
+    font-size: .7rem!important;
+}
+
+/*********Modales********/
+div.modalColImg img {
+    width: 150px;
+}

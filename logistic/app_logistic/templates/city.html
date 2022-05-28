@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Logistic</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div>
+      
+  </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-12">
+          <!-- Default box -->
+          <div class="card">
+            
+            <div class="card-header">
+              <h3 class="card-title"></h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Elige la ciudad a verificar: </h3>
+              <a href="{% url 'city' city=1 %}" class="btn btn-primary btn-lg active" role="button"> Ciudad  A</a>
+              <a href="{% url 'city' city=2 %}" class="btn btn-primary btn-lg active" role="button"> Ciudad  B</a>
+              <a href="{% url 'city' city=3 %}" class="btn btn-primary btn-lg active" role="button"> Ciudad  C</a>
+                <br>
+                <br>
+
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id del vehículo</th>
+                        <th>Consumo de combustible (Km/lt)</th>
+                        <th>Distancia recorrida (Km)</th>
+                        <th>Combustible consumido (lt)</th>
+                      </tr>
+                </thead>
+                <tbody>
+                  {% for vehicle in vehicles %}
+                  <tr>
+                    <td>{{vehicle.vehicle_id}}</td>
+                    <td>{{vehicle.fuel_consumption}}</td>
+                    <td>{{vehicle.distance_traveled}}</td>
+                    <td>{{vehicle.fuel_consumed}}</td>
+                  </tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+
+                
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              ProsaDB
+            </div>
+            <!-- /.card-footer-->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock %}
